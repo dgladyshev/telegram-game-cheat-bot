@@ -1,0 +1,2 @@
+spring.application.name: telegram-game-cheat-bot
+spring.boot.admin.client.enabled: false
