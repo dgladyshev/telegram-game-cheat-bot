@@ -8,3 +8,34 @@ help
 // Spring Shell 1.2.0.M1 log opened at 2016-12-29 01:51:12
 // Spring Shell 1.2.0.M1 log opened at 2016-12-29 01:52:35
 print --message hello
+// Spring Shell 1.2.0.M1 log opened at 2016-12-29 13:42:53
+print --message some
+// Spring Shell 1.2.0.M1 log opened at 2016-12-29 13:53:42
+// Spring Shell 1.2.0.M1 log opened at 2016-12-29 14:21:06
+// Spring Shell 1.2.0.M1 log opened at 2016-12-29 14:21:23
+run
+run
+run
+// Spring Shell 1.2.0.M1 log opened at 2016-12-29 14:22:03
+// Spring Shell 1.2.0.M1 log opened at 2016-12-29 14:25:55
+// [failed] run
+// Spring Shell 1.2.0.M1 log opened at 2016-12-29 14:26:17
+// Spring Shell 1.2.0.M1 log opened at 2016-12-29 14:27:15
+// Spring Shell 1.2.0.M1 log opened at 2016-12-29 14:27:48
+// Spring Shell 1.2.0.M1 log opened at 2016-12-29 14:28:11
+// Spring Shell 1.2.0.M1 log opened at 2016-12-29 14:37:10
+run
+stop
+// Spring Shell 1.2.0.M1 log opened at 2016-12-29 14:41:44
+run
+// Spring Shell 1.2.0.M1 log opened at 2016-12-29 14:42:00
+start --strategy mess
+status
+stop
+status
+// Spring Shell 1.2.0.M1 log opened at 2016-12-29 14:45:24
+// Spring Shell 1.2.0.M1 log opened at 2016-12-29 14:45:57
+start
+status
+stop
+status

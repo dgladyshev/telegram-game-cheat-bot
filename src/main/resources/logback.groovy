@@ -1,17 +1,13 @@
 import ch.qos.logback.classic.encoder.PatternLayoutEncoder
 import ch.qos.logback.core.ConsoleAppender
-import net.logstash.logback.appender.LogstashTcpSocketAppender
-import net.logstash.logback.encoder.LogstashEncoder
 import org.slf4j.MDC
 
-import static ch.qos.logback.classic.Level.*
+import static ch.qos.logback.classic.Level.DEBUG
+import static ch.qos.logback.classic.Level.OFF
 
 def appenderList = ["CONSOLE"]
 
-def sourceType = "server"
-def sourceId = "telegram-game-cheat-bot"
-def logstashHost = System.getenv("LOGSTASH_HOST")
-def logstashPort = System.getenv("LOGSTASH_PORT")
+def appId = "telegram-game-cheat-bot"
 
 jmxConfigurator()
 
@@ -29,15 +25,5 @@ appender("CONSOLE", ConsoleAppender) {
     }
 }
 
-if (logstashHost != null) {
-    appender("logstash", LogstashTcpSocketAppender) {
-        remoteHost = logstashHost
-        port = logstashPort.toInteger()
-        encoder(LogstashEncoder)
-    }
-    appenderList.add("logstash")
-}
-
-MDC.put("source_type", sourceType)
-MDC.put("source_id", sourceId)
+MDC.put("app_id", appId)
 root(DEBUG, appenderList)
